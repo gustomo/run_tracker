@@ -1,0 +1,174 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar styles */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.brand {
+    color: #fff;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+}
+
+.firstname {
+    color: yellow; /* Warna kuning pada tulisan "Run" */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.lastname {
+    font-style: italic;
+    color: #ccc;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav li a:hover {
+    background-color: #575757;
+    color: #f4f4f4;
+}
+
+.nav li img {
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Table styles */
+.tb {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.isi th,
+.output td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.isi th {
+    background-color: #333;
+    color: #fff;
+}
+
+.output td {
+    background-color: #f9f9f9;
+}
+
+/* Add new button styles */
+.add-new {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-new:hover {
+    background-color: #575757;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav.active {
+        max-height: 300px;
+    }
+
+    .nav li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav li img {
+        height: 30px;
+        margin: 10px auto;
+    }
+
+    .tb,
+    .add-new {
+        width: 100%;
+        padding: 10px;
+    }
+}
